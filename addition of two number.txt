@@ -1,0 +1,21 @@
+//Addition of Two Number 
+
+
+MVI A,10H //Move Imediate value 10H to Accumulator
+LXI H,2050H // Active H and L resgister 
+MOV M,A  // Move Accumulator value to memory 
+
+MVI A,05H
+LXI H,2051H
+MOV M,A
+
+LDA 2050H //load 2050 address register 
+MOV B,A //move accumulator value to B register
+
+LDA 2051H
+ADD B
+
+STA 2052H
+MOV M,A
+
+HLT
